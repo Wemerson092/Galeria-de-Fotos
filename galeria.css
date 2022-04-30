@@ -1,0 +1,29 @@
+/* em grande dispositivos */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, auto);/* 3 imagens por click */
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* centro horizontal */
+}
+
+/* em pequenos dispositivos */
+@media screen and (max-width: 640px) {
+    .galeria {
+        grid-template-columns: repeat(2, auto) /* 2 imagem por click */;
+    }
+}
+
+/* thumbnails */
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeria img:fullscreen { object-fit: contain; }
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
